@@ -1,0 +1,152 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>Testing Modules &mdash; odoo 8.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/patchqueue.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '8.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/patchqueue.js"></script>
+    <script type="text/javascript" src="../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../_static/doc.js"></script>
+    <script type="text/javascript" src="../_static/jquery.noconflict.js"></script>
+    <link rel="top" title="odoo 8.0 documentation" href="../index.html" />
+    <link rel="up" title="Reference" href="../reference.html" />
+    <link rel="next" title="Web Controllers" href="http.html" />
+    <link rel="prev" title="Security in Odoo" href="security.html" /> 
+  </head>
+  <body role="document"><header class="">
+    <figure class="card top">
+      <span class="card-img" style="background-image: url('../_static/banners/testing_modules.jpg');"></span>
+    </figure>
+  </header>
+  <nav id="main_navbar" class="navbar ">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-main">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <nav class="nav navbar-nav navbar-left">
+          <li id="main-back"><a href="../index.html" class="mdi-navigation-arrow-back"></a></li>
+          <li>
+            <h1 id="main_title">Testing Modules</h1>
+          </li>
+        </nav>
+      </div>
+
+      <nav class="collapse navbar-collapse navbar-main navbar-right" role="navigation">
+        
+        <ul class="current navbar-nav navbar-right nav"><li class="toctree-l1 dropdown"><a data-toggle="dropdown" href="../tutorials.html" class="dropdown-toggle internal reference">Tutorials</a><ul class="dropdown-menu"><li class="toctree-l2"><a href="../howtos/themes.html" class="internal reference">Theme Tutorial</a></li><li class="toctree-l2"><a href="../howtos/website.html" class="internal reference">Building a Website</a></li><li class="toctree-l2"><a href="../howtos/backend.html" class="internal reference">Building a Module</a></li><li class="toctree-l2"><a href="../howtos/web.html" class="internal reference">Building Interface Extensions</a></li></ul></li><li class="toctree-l1"><a href="../api_integration.html" class="internal reference">Web Service API</a><ul ></ul></li><li class="toctree-l1 dropdown"><a data-toggle="dropdown" href="../setup.html" class="dropdown-toggle internal reference">Setting Up</a><ul class="dropdown-menu"><li class="toctree-l2"><a href="../setup/install.html" class="internal reference">Installing Odoo</a></li><li class="toctree-l2"><a href="../setup/deploy.html" class="internal reference">Deploying Odoo</a></li></ul></li><li class="toctree-l1 current dropdown"><a data-toggle="dropdown" href="../reference.html" class="dropdown-toggle internal reference">Reference</a><ul class="current dropdown-menu"><li class="toctree-l2"><a href="orm.html" class="internal reference">ORM API</a></li><li class="toctree-l2"><a href="data.html" class="internal reference">Data Files</a></li><li class="toctree-l2"><a href="actions.html" class="internal reference">Actions</a></li><li class="toctree-l2"><a href="views.html" class="internal reference">Views</a></li><li class="toctree-l2"><a href="module.html" class="internal reference">Modules</a></li><li class="toctree-l2"><a href="cmdline.html" class="internal reference">Command-line interface: odoo.py</a></li><li class="toctree-l2"><a href="security.html" class="internal reference">Security in Odoo</a></li><li class="current toctree-l2"><a href="" class="current internal reference">Testing Modules</a></li><li class="toctree-l2"><a href="http.html" class="internal reference">Web Controllers</a></li><li class="toctree-l2"><a href="qweb.html" class="internal reference">QWeb</a></li><li class="toctree-l2"><a href="javascript.html" class="internal reference">Javascript</a></li><li class="toctree-l2"><a href="translations.html" class="internal reference">Translating Modules</a></li><li class="toctree-l2"><a href="reports.html" class="internal reference">QWeb Reports</a></li><li class="toctree-l2"><a href="workflows.html" class="internal reference">Workflows</a></li><li class="toctree-l2"><a href="guidelines.html" class="internal reference">Odoo Guidelines</a></li><li class="toctree-l2"><a href="upgrade_api.html" class="internal reference">Upgrade API</a></li></ul></li><li class="toctree-l1 dropdown"><a data-toggle="dropdown" href="../business.html" class="dropdown-toggle internal reference">Business Mementoes</a><ul class="dropdown-menu"><li class="toctree-l2"><a href="https://odoo.com/documentation/functional/accounting.html" class="external reference">Accounting Memento (US GAAP)</a></li><li class="toctree-l2"><a href="https://odoo.com/documentation/functional/double-entry.html" class="external reference">Double-Entry Inventory</a></li><li class="toctree-l2"><a href="https://odoo.com/documentation/functional/valuation.html" class="external reference">Inventory Valuations</a></li></ul></li></ul>
+      </nav>
+    </div>
+  </nav>
+    
+  
+  <main class="container ">
+    
+    <div class="row">
+      
+      <aside>
+        <div class="navbar-aside text-center">
+          <div class="logo_box">
+            <span class="logo"></span>
+            Documentation
+          </div>
+          <ul class="list-group text-left nav"><li class="list-group-item"><a href="#running-tests" class="ripple internal reference">Running tests</a></li></ul>
+          
+          <p class="gith-container"><a href="https://github.com/odoo/odoo/edit/8.0/doc/reference/testing.rst" class="gith-link">
+              Edit on GitHub
+          </a></p>
+          
+        </div>
+      </aside>
+      
+      <article class="doc-body ">
+        
+        
+  <section id="testing-modules"><i id="reference-testing"></i><p >Odoo provides support for testing modules using <a href="http://pypi.python.org/pypi/unittest2" class="external reference">unittest2</a>.</p><p >To write tests, simply define a <code >tests</code> sub-package in your module, it will
+be automatically inspected for test modules. Test modules should have a name
+starting with <code >test_</code> and should be imported from <code >tests/__init__.py</code>,
+e.g.</p><div class="highlight-text"><div class="highlight"><pre>your_module
+|-- ...
+`-- tests
+    |-- __init__.py
+    |-- test_bar.py
+    `-- test_foo.py
+</pre></div>
+</div>
+<p >and <code >__init__.py</code> contains:</p><div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">test_foo</span><span class="p">,</span> <span class="n">test_bar</span>
+</pre></div>
+</div>
+<div role="alert" class="alert-warning alert"><p class="alert-title">Warning</p><p >test modules which are not imported from <code >tests/__init__.py</code> will not be
+run</p></div><div class="versionchanged"><p ><span class="versionmodified">Changed in version 8.0: </span>previously, the test runner would only run modules added to two lists
+<code >fast_suite</code> and <code >checks</code> in <code >tests/__init__.py</code>. In 8.0 it will
+run all imported modules</p></div><p >The test runner will simply run any test case, as described in the official
+<a href="https://docs.python.org/2/library/unittest.html" class="external reference">unittest documentation</a>, but Odoo provides a number of utilities and helpers
+related to testing Odoo content (modules, mainly):</p><p >By default, tests are run once right after the corresponding module has been
+installed. Test cases can also be configured to run after all modules have
+been installed, and not run right after the module installation:</p><p >The most common situation is to use
+<code class="py xref py-class">TransactionCase</code> and test a property of a model
+in each method:</p><div class="highlight-python"><div class="highlight"><pre><span class="k">class</span> <span class="nc">TestModelA</span><span class="p">(</span><span class="n">common</span><span class="o">.</span><span class="n">TransactionCase</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">test_some_action</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">record</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">env</span><span class="p">[</span><span class="s">&#39;model.a&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">create</span><span class="p">({</span><span class="s">&#39;field&#39;</span><span class="p">:</span> <span class="s">&#39;value&#39;</span><span class="p">})</span>
+        <span class="n">record</span><span class="o">.</span><span class="n">some_action</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span>
+            <span class="n">record</span><span class="o">.</span><span class="n">field</span><span class="p">,</span>
+            <span class="n">expected_field_value</span><span class="p">)</span>
+
+    <span class="c"># other tests...</span>
+</pre></div>
+</div>
+</section><section id="running-tests"><h2 >Running tests</h2><p >Tests are automatically run when installing or updating modules if
+<a href="cmdline.html#cmdoption-odoo.py--test-enable" class="internal reference"><code class="std xref std-option">--test-enable</code></a> was enabled when starting the
+Odoo server.</p><p >As of Odoo 8, running tests outside of the install/update cycle is not
+supported.</p></section>
+
+      </article>
+    </div>
+    
+    <div id="mask"></div>
+  </main>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  </body>
+</html>

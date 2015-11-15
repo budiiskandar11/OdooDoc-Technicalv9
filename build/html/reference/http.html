@@ -1,0 +1,145 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>Web Controllers &mdash; odoo 8.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/patchqueue.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '8.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/patchqueue.js"></script>
+    <script type="text/javascript" src="../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../_static/doc.js"></script>
+    <script type="text/javascript" src="../_static/jquery.noconflict.js"></script>
+    <link rel="top" title="odoo 8.0 documentation" href="../index.html" />
+    <link rel="up" title="Reference" href="../reference.html" />
+    <link rel="next" title="QWeb" href="qweb.html" />
+    <link rel="prev" title="Testing Modules" href="testing.html" /> 
+  </head>
+  <body role="document"><header class="">
+    <figure class="card top">
+      <span class="card-img" style="background-image: url('../_static/banners/web_controllers.jpg');"></span>
+    </figure>
+  </header>
+  <nav id="main_navbar" class="navbar ">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-main">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <nav class="nav navbar-nav navbar-left">
+          <li id="main-back"><a href="../index.html" class="mdi-navigation-arrow-back"></a></li>
+          <li>
+            <h1 id="main_title">Web Controllers</h1>
+          </li>
+        </nav>
+      </div>
+
+      <nav class="collapse navbar-collapse navbar-main navbar-right" role="navigation">
+        
+        <ul class="current navbar-nav navbar-right nav"><li class="toctree-l1 dropdown"><a data-toggle="dropdown" href="../tutorials.html" class="dropdown-toggle internal reference">Tutorials</a><ul class="dropdown-menu"><li class="toctree-l2"><a href="../howtos/themes.html" class="internal reference">Theme Tutorial</a></li><li class="toctree-l2"><a href="../howtos/website.html" class="internal reference">Building a Website</a></li><li class="toctree-l2"><a href="../howtos/backend.html" class="internal reference">Building a Module</a></li><li class="toctree-l2"><a href="../howtos/web.html" class="internal reference">Building Interface Extensions</a></li></ul></li><li class="toctree-l1"><a href="../api_integration.html" class="internal reference">Web Service API</a><ul ></ul></li><li class="toctree-l1 dropdown"><a data-toggle="dropdown" href="../setup.html" class="dropdown-toggle internal reference">Setting Up</a><ul class="dropdown-menu"><li class="toctree-l2"><a href="../setup/install.html" class="internal reference">Installing Odoo</a></li><li class="toctree-l2"><a href="../setup/deploy.html" class="internal reference">Deploying Odoo</a></li></ul></li><li class="toctree-l1 current dropdown"><a data-toggle="dropdown" href="../reference.html" class="dropdown-toggle internal reference">Reference</a><ul class="current dropdown-menu"><li class="toctree-l2"><a href="orm.html" class="internal reference">ORM API</a></li><li class="toctree-l2"><a href="data.html" class="internal reference">Data Files</a></li><li class="toctree-l2"><a href="actions.html" class="internal reference">Actions</a></li><li class="toctree-l2"><a href="views.html" class="internal reference">Views</a></li><li class="toctree-l2"><a href="module.html" class="internal reference">Modules</a></li><li class="toctree-l2"><a href="cmdline.html" class="internal reference">Command-line interface: odoo.py</a></li><li class="toctree-l2"><a href="security.html" class="internal reference">Security in Odoo</a></li><li class="toctree-l2"><a href="testing.html" class="internal reference">Testing Modules</a></li><li class="current toctree-l2"><a href="" class="current internal reference">Web Controllers</a></li><li class="toctree-l2"><a href="qweb.html" class="internal reference">QWeb</a></li><li class="toctree-l2"><a href="javascript.html" class="internal reference">Javascript</a></li><li class="toctree-l2"><a href="translations.html" class="internal reference">Translating Modules</a></li><li class="toctree-l2"><a href="reports.html" class="internal reference">QWeb Reports</a></li><li class="toctree-l2"><a href="workflows.html" class="internal reference">Workflows</a></li><li class="toctree-l2"><a href="guidelines.html" class="internal reference">Odoo Guidelines</a></li><li class="toctree-l2"><a href="upgrade_api.html" class="internal reference">Upgrade API</a></li></ul></li><li class="toctree-l1 dropdown"><a data-toggle="dropdown" href="../business.html" class="dropdown-toggle internal reference">Business Mementoes</a><ul class="dropdown-menu"><li class="toctree-l2"><a href="https://odoo.com/documentation/functional/accounting.html" class="external reference">Accounting Memento (US GAAP)</a></li><li class="toctree-l2"><a href="https://odoo.com/documentation/functional/double-entry.html" class="external reference">Double-Entry Inventory</a></li><li class="toctree-l2"><a href="https://odoo.com/documentation/functional/valuation.html" class="external reference">Inventory Valuations</a></li></ul></li></ul>
+      </nav>
+    </div>
+  </nav>
+    
+  
+  <main class="container ">
+    
+    <div class="row">
+      
+      <aside>
+        <div class="navbar-aside text-center">
+          <div class="logo_box">
+            <span class="logo"></span>
+            Documentation
+          </div>
+          <ul class="list-group text-left nav"><li class="list-group-item"><a href="#routing" class="ripple internal reference">Routing</a></li><li class="list-group-item"><a href="#request" class="ripple internal reference">Request</a></li><li class="list-group-item"><a href="#response" class="ripple internal reference">Response</a></li><li class="list-group-item"><a href="#controllers" class="ripple internal reference">Controllers</a></li></ul>
+          
+          <p class="gith-container"><a href="https://github.com/odoo/odoo/edit/8.0/doc/reference/http.rst" class="gith-link">
+              Edit on GitHub
+          </a></p>
+          
+        </div>
+      </aside>
+      
+      <article class="doc-body ">
+        
+        
+  <section id="web-controllers"></section><section id="routing"><i id="reference-http-routing"></i><h2 >Routing</h2></section><section id="request"><i id="reference-http-request"></i><h2 >Request</h2><p >The request object is automatically set on <code class="py xref py-data">openerp.http.request</code> at
+the start of the request</p></section><section id="response"><h2 >Response</h2></section><section id="controllers"><i id="reference-http-controllers"></i><h2 >Controllers</h2><p >Controllers need to provide extensibility, much like
+<code class="py xref py-class">Model</code>, but can't use the same mechanism as the
+pre-requisites (a database with loaded modules) may not be available yet (e.g.
+no database created, or no database selected).</p><p >Controllers thus provide their own extension mechanism, separate from that of
+models:</p><p >Controllers are created by <a href="https://docs.python.org/2/tutorial/classes.html#tut-inheritance" class="external reference" title="(in Python v2.7)"><span class="std xref std-ref">inheriting</span></a> from</p><p >and defining methods decorated with <code class="py xref py-func">route()</code>:</p><div class="highlight-python"><div class="highlight"><pre><span class="k">class</span> <span class="nc">MyController</span><span class="p">(</span><span class="n">openerp</span><span class="o">.</span><span class="n">http</span><span class="o">.</span><span class="n">Controller</span><span class="p">):</span>
+    <span class="nd">@route</span><span class="p">(</span><span class="s">&#39;/some_url&#39;</span><span class="p">,</span> <span class="n">auth</span><span class="o">=</span><span class="s">&#39;public&#39;</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">handler</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">stuff</span><span class="p">()</span>
+</pre></div>
+</div>
+<p >To <em >override</em> a controller, <a href="https://docs.python.org/2/tutorial/classes.html#tut-inheritance" class="external reference" title="(in Python v2.7)"><span class="std xref std-ref">inherit</span></a> from its
+class and override relevant methods, re-exposing them if necessary:</p><div class="highlight-python"><div class="highlight"><pre><span class="k">class</span> <span class="nc">Extension</span><span class="p">(</span><span class="n">MyController</span><span class="p">):</span>
+    <span class="nd">@route</span><span class="p">()</span>
+    <span class="k">def</span> <span class="nf">handler</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">do_before</span><span class="p">()</span>
+        <span class="k">return</span> <span class="nb">super</span><span class="p">(</span><span class="n">Extension</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">handler</span><span class="p">()</span>
+</pre></div>
+</div>
+<ul ><li >decorating with <code class="py xref py-func">route()</code> is necessary to keep the method
+(and route) visible: if the method is redefined without decorating, it
+will be &quot;unpublished&quot;</li><li ><p >the decorators of all methods are combined, if the overriding method's
+decorator has no argument all previous ones will be kept, any provided
+argument will override previously defined ones e.g.:</p><div class="highlight-python"><div class="highlight"><pre><span class="k">class</span> <span class="nc">Restrict</span><span class="p">(</span><span class="n">MyController</span><span class="p">):</span>
+    <span class="nd">@route</span><span class="p">(</span><span class="n">auth</span><span class="o">=</span><span class="s">&#39;user&#39;</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">handler</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">super</span><span class="p">(</span><span class="n">Restrict</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">handler</span><span class="p">()</span>
+</pre></div>
+</div>
+<p >will change <code >/some_url</code> from public authentication to user (requiring a
+log-in)</p></li></ul></section>
+
+      </article>
+    </div>
+    
+    <div id="mask"></div>
+  </main>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  </body>
+</html>

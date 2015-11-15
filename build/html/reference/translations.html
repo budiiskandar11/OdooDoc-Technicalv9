@@ -1,0 +1,154 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>Translating Modules &mdash; odoo 8.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/patchqueue.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '8.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/patchqueue.js"></script>
+    <script type="text/javascript" src="../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../_static/doc.js"></script>
+    <script type="text/javascript" src="../_static/jquery.noconflict.js"></script>
+    <link rel="top" title="odoo 8.0 documentation" href="../index.html" />
+    <link rel="up" title="Reference" href="../reference.html" />
+    <link rel="next" title="QWeb Reports" href="reports.html" />
+    <link rel="prev" title="Javascript" href="javascript.html" /> 
+  </head>
+  <body role="document"><header class="">
+    <figure class="card top">
+      <span class="card-img" style="background-image: url('../_static/banners/translate.jpg');"></span>
+    </figure>
+  </header>
+  <nav id="main_navbar" class="navbar ">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-main">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <nav class="nav navbar-nav navbar-left">
+          <li id="main-back"><a href="../index.html" class="mdi-navigation-arrow-back"></a></li>
+          <li>
+            <h1 id="main_title">Translating Modules</h1>
+          </li>
+        </nav>
+      </div>
+
+      <nav class="collapse navbar-collapse navbar-main navbar-right" role="navigation">
+        
+        <ul class="current navbar-nav navbar-right nav"><li class="toctree-l1 dropdown"><a data-toggle="dropdown" href="../tutorials.html" class="dropdown-toggle internal reference">Tutorials</a><ul class="dropdown-menu"><li class="toctree-l2"><a href="../howtos/themes.html" class="internal reference">Theme Tutorial</a></li><li class="toctree-l2"><a href="../howtos/website.html" class="internal reference">Building a Website</a></li><li class="toctree-l2"><a href="../howtos/backend.html" class="internal reference">Building a Module</a></li><li class="toctree-l2"><a href="../howtos/web.html" class="internal reference">Building Interface Extensions</a></li></ul></li><li class="toctree-l1"><a href="../api_integration.html" class="internal reference">Web Service API</a><ul ></ul></li><li class="toctree-l1 dropdown"><a data-toggle="dropdown" href="../setup.html" class="dropdown-toggle internal reference">Setting Up</a><ul class="dropdown-menu"><li class="toctree-l2"><a href="../setup/install.html" class="internal reference">Installing Odoo</a></li><li class="toctree-l2"><a href="../setup/deploy.html" class="internal reference">Deploying Odoo</a></li></ul></li><li class="toctree-l1 current dropdown"><a data-toggle="dropdown" href="../reference.html" class="dropdown-toggle internal reference">Reference</a><ul class="current dropdown-menu"><li class="toctree-l2"><a href="orm.html" class="internal reference">ORM API</a></li><li class="toctree-l2"><a href="data.html" class="internal reference">Data Files</a></li><li class="toctree-l2"><a href="actions.html" class="internal reference">Actions</a></li><li class="toctree-l2"><a href="views.html" class="internal reference">Views</a></li><li class="toctree-l2"><a href="module.html" class="internal reference">Modules</a></li><li class="toctree-l2"><a href="cmdline.html" class="internal reference">Command-line interface: odoo.py</a></li><li class="toctree-l2"><a href="security.html" class="internal reference">Security in Odoo</a></li><li class="toctree-l2"><a href="testing.html" class="internal reference">Testing Modules</a></li><li class="toctree-l2"><a href="http.html" class="internal reference">Web Controllers</a></li><li class="toctree-l2"><a href="qweb.html" class="internal reference">QWeb</a></li><li class="toctree-l2"><a href="javascript.html" class="internal reference">Javascript</a></li><li class="current toctree-l2"><a href="" class="current internal reference">Translating Modules</a></li><li class="toctree-l2"><a href="reports.html" class="internal reference">QWeb Reports</a></li><li class="toctree-l2"><a href="workflows.html" class="internal reference">Workflows</a></li><li class="toctree-l2"><a href="guidelines.html" class="internal reference">Odoo Guidelines</a></li><li class="toctree-l2"><a href="upgrade_api.html" class="internal reference">Upgrade API</a></li></ul></li><li class="toctree-l1 dropdown"><a data-toggle="dropdown" href="../business.html" class="dropdown-toggle internal reference">Business Mementoes</a><ul class="dropdown-menu"><li class="toctree-l2"><a href="https://odoo.com/documentation/functional/accounting.html" class="external reference">Accounting Memento (US GAAP)</a></li><li class="toctree-l2"><a href="https://odoo.com/documentation/functional/double-entry.html" class="external reference">Double-Entry Inventory</a></li><li class="toctree-l2"><a href="https://odoo.com/documentation/functional/valuation.html" class="external reference">Inventory Valuations</a></li></ul></li></ul>
+      </nav>
+    </div>
+  </nav>
+    
+  
+  <main class="container ">
+    
+    <div class="row">
+      
+      <aside>
+        <div class="navbar-aside text-center">
+          <div class="logo_box">
+            <span class="logo"></span>
+            Documentation
+          </div>
+          <ul class="list-group text-left nav"><li class="list-group-item"><a href="#exporting-translatable-term" class="ripple internal reference">Exporting translatable term</a></li><li class="list-group-item"><a href="#implicit-exports" class="ripple internal reference">Implicit exports</a></li><li class="list-group-item"><a href="#explicit-exports" class="ripple internal reference">Explicit exports</a></li></ul>
+          
+          <p class="gith-container"><a href="https://github.com/odoo/odoo/edit/8.0/doc/reference/translations.rst" class="gith-link">
+              Edit on GitHub
+          </a></p>
+          
+        </div>
+      </aside>
+      
+      <article class="doc-body ">
+        
+        
+  <section id="translating-modules"><i id="reference-translations"></i></section><section id="exporting-translatable-term"><h2 >Exporting translatable term</h2><p >A number of terms in your modules are &quot;implicitly translatable&quot; as a result,
+even if you haven't done any specific work towards translation you can export
+your module's translatable terms and may find content to work with.</p><p >Translations export is performed via the administration interface by logging into
+the backend interface and opening <span class="menuselection">Settings ‣ Translations
+‣ Import / Export ‣ Export Translations</span></p><ul ><li >leave the language to the default (new language/empty template)</li><li >select the <a href="http://en.wikipedia.org/wiki/Gettext#Translating" class="external reference">PO File</a> format</li><li >select your module</li><li >click <span class="guilabel">Export</span> and download the file</li></ul><a href="../_images/po-export.png" class="internal reference"><img src="../_images/po-export.png" class="img-responsive center-block"></a><p >This gives you a file called <code class="file"><em >yourmodule</em>.pot</code> which should be moved to
+the <code class="file"><em >yourmodule</em>/i18n/</code> directory. The file is a <em >PO Template</em> which
+simply lists translatable strings and from which actual translations (PO files)
+can be created. PO files can be created using <a href="http://www.gnu.org/software/gettext/manual/gettext.html#Creating" class="external reference">msginit</a>, with a dedicated
+translation tool like <a href="http://poedit.net/" class="external reference">POEdit</a> or by simply copying the template to a new file
+called <code class="file"><em >language</em>.po</code>. Translation files should be put in
+<code class="file"><em >yourmodule</em>/i18n/</code>, next to <code class="file"><em >yourmodule</em>.pot</code>, and will be
+automatically loaded by Odoo when the corresponding language is installed (via
+<span class="menuselection">Settings ‣ Translations ‣ Load a Translation</span>)</p><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >translations for all loaded languages are also installed or updated
+when installing or updating a module</p></div></section><section id="implicit-exports"><h2 >Implicit exports</h2><p >Odoo automatically exports translatable strings from &quot;data&quot;-type content:</p><ul ><li >in non-QWeb views, all text nodes are exported as well as the content of
+the <code >string</code>, <code >help</code>, <code >sum</code>, <code >confirm</code> and <code >placeholder</code>
+attributes</li><li >QWeb templates (both server-side and client-side), all text nodes are
+exported except inside <code >t-translation=&quot;off&quot;</code> blocks, the content of the
+<code >title</code>, <code >alt</code>, <code >label</code> and <code >placeholder</code> attributes are also
+exported</li><li ><p >for <code class="py xref py-class">Field</code>, unless their model is marked with
+<code >_translate = False</code>:</p><ul ><li >their <code >string</code> and <code >help</code> attributes are exported</li><li >if <code >selection</code> is present and a list (or tuple), it's exported</li><li >if their <code >translate</code> attribute is set to <code >True</code>, all of their existing
+values (across all records) are exported</li></ul></li><li >help/error messages of <code class="py xref py-attr">_constraints</code> and
+<code class="py xref py-attr">_sql_constraints</code> are exported</li></ul></section><section id="explicit-exports"><h2 >Explicit exports</h2><p >When it comes to more &quot;imperative&quot; situations in Python code or Javascript
+code, Odoo cannot automatically export translatable terms so they
+must be marked explicitly for export. This is done by wrapping a literal
+string in a function call.</p><p >In Python, the wrapping function is <code class="py xref py-func">openerp._()</code>:</p><div class="highlight-python"><div class="highlight"><pre><span class="n">title</span> <span class="o">=</span> <span class="n">_</span><span class="p">(</span><span class="s">&quot;Bank Accounts&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p >In JavaScript, the wrapping function is generally <code class="js-func xref js">openerp.web._t()</code>:</p><div class="highlight-javascript"><div class="highlight"><pre><span class="nx">title</span> <span class="o">=</span> <span class="nx">_t</span><span class="p">(</span><span class="s2">&quot;Bank Accounts&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div role="alert" class="alert-warning alert"><p class="alert-title">Warning</p><p >Only literal strings can be marked for exports, not expressions or
+variables. For situations where strings are formatted, this means the
+format string must be marked, not the formatted string:</p><div class="highlight-python"><div class="highlight"><pre><span class="c"># bad, the extract may work but it will not translate the text correctly</span>
+<span class="n">_</span><span class="p">(</span><span class="s">&quot;Scheduled meeting with </span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="n">invitee</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+
+<span class="c"># good</span>
+<span class="n">_</span><span class="p">(</span><span class="s">&quot;Scheduled meeting with </span><span class="si">%s</span><span class="s">&quot;</span><span class="p">)</span> <span class="o">%</span> <span class="n">invitee</span><span class="o">.</span><span class="n">name</span>
+</pre></div>
+</div>
+</div></section>
+
+      </article>
+    </div>
+    
+    <div id="mask"></div>
+  </main>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  </body>
+</html>

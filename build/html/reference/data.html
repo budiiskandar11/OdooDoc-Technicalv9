@@ -1,0 +1,192 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>Data Files &mdash; odoo 8.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/patchqueue.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '8.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/patchqueue.js"></script>
+    <script type="text/javascript" src="../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../_static/doc.js"></script>
+    <script type="text/javascript" src="../_static/jquery.noconflict.js"></script>
+    <link rel="top" title="odoo 8.0 documentation" href="../index.html" />
+    <link rel="up" title="Reference" href="../reference.html" />
+    <link rel="next" title="Actions" href="actions.html" />
+    <link rel="prev" title="ORM API" href="orm.html" /> 
+  </head>
+  <body role="document"><header class="">
+    <figure class="card top">
+      <span class="card-img" style="background-image: url('../_static/banners/data_files.jpg');"></span>
+    </figure>
+  </header>
+  <nav id="main_navbar" class="navbar ">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-main">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <nav class="nav navbar-nav navbar-left">
+          <li id="main-back"><a href="../index.html" class="mdi-navigation-arrow-back"></a></li>
+          <li>
+            <h1 id="main_title">Data Files</h1>
+          </li>
+        </nav>
+      </div>
+
+      <nav class="collapse navbar-collapse navbar-main navbar-right" role="navigation">
+        
+        <ul class="current navbar-nav navbar-right nav"><li class="toctree-l1 dropdown"><a data-toggle="dropdown" href="../tutorials.html" class="dropdown-toggle internal reference">Tutorials</a><ul class="dropdown-menu"><li class="toctree-l2"><a href="../howtos/themes.html" class="internal reference">Theme Tutorial</a></li><li class="toctree-l2"><a href="../howtos/website.html" class="internal reference">Building a Website</a></li><li class="toctree-l2"><a href="../howtos/backend.html" class="internal reference">Building a Module</a></li><li class="toctree-l2"><a href="../howtos/web.html" class="internal reference">Building Interface Extensions</a></li></ul></li><li class="toctree-l1"><a href="../api_integration.html" class="internal reference">Web Service API</a><ul ></ul></li><li class="toctree-l1 dropdown"><a data-toggle="dropdown" href="../setup.html" class="dropdown-toggle internal reference">Setting Up</a><ul class="dropdown-menu"><li class="toctree-l2"><a href="../setup/install.html" class="internal reference">Installing Odoo</a></li><li class="toctree-l2"><a href="../setup/deploy.html" class="internal reference">Deploying Odoo</a></li></ul></li><li class="toctree-l1 current dropdown"><a data-toggle="dropdown" href="../reference.html" class="dropdown-toggle internal reference">Reference</a><ul class="current dropdown-menu"><li class="toctree-l2"><a href="orm.html" class="internal reference">ORM API</a></li><li class="current toctree-l2"><a href="" class="current internal reference">Data Files</a></li><li class="toctree-l2"><a href="actions.html" class="internal reference">Actions</a></li><li class="toctree-l2"><a href="views.html" class="internal reference">Views</a></li><li class="toctree-l2"><a href="module.html" class="internal reference">Modules</a></li><li class="toctree-l2"><a href="cmdline.html" class="internal reference">Command-line interface: odoo.py</a></li><li class="toctree-l2"><a href="security.html" class="internal reference">Security in Odoo</a></li><li class="toctree-l2"><a href="testing.html" class="internal reference">Testing Modules</a></li><li class="toctree-l2"><a href="http.html" class="internal reference">Web Controllers</a></li><li class="toctree-l2"><a href="qweb.html" class="internal reference">QWeb</a></li><li class="toctree-l2"><a href="javascript.html" class="internal reference">Javascript</a></li><li class="toctree-l2"><a href="translations.html" class="internal reference">Translating Modules</a></li><li class="toctree-l2"><a href="reports.html" class="internal reference">QWeb Reports</a></li><li class="toctree-l2"><a href="workflows.html" class="internal reference">Workflows</a></li><li class="toctree-l2"><a href="guidelines.html" class="internal reference">Odoo Guidelines</a></li><li class="toctree-l2"><a href="upgrade_api.html" class="internal reference">Upgrade API</a></li></ul></li><li class="toctree-l1 dropdown"><a data-toggle="dropdown" href="../business.html" class="dropdown-toggle internal reference">Business Mementoes</a><ul class="dropdown-menu"><li class="toctree-l2"><a href="https://odoo.com/documentation/functional/accounting.html" class="external reference">Accounting Memento (US GAAP)</a></li><li class="toctree-l2"><a href="https://odoo.com/documentation/functional/double-entry.html" class="external reference">Double-Entry Inventory</a></li><li class="toctree-l2"><a href="https://odoo.com/documentation/functional/valuation.html" class="external reference">Inventory Valuations</a></li></ul></li></ul>
+      </nav>
+    </div>
+  </nav>
+    
+  
+  <main class="container ">
+    
+    <div class="row">
+      
+      <aside>
+        <div class="navbar-aside text-center">
+          <div class="logo_box">
+            <span class="logo"></span>
+            Documentation
+          </div>
+          <ul class="list-group text-left nav"><li class="list-group-item"><a href="#structure" class="ripple internal reference">Structure</a></li><li class="list-group-item"><a href="#core-operations" class="ripple internal reference">Core operations</a><ul ><li class="list-group-item"><a href="#record" class="ripple internal reference"><code >record</code></a><ul ><li class="list-group-item"><a href="#field" class="ripple internal reference"><code >field</code></a></li></ul></li><li class="list-group-item"><a href="#delete" class="ripple internal reference"><code >delete</code></a></li><li class="list-group-item"><a href="#function" class="ripple internal reference"><code >function</code></a></li><li class="list-group-item"><a href="#workflow" class="ripple internal reference"><code >workflow</code></a></li></ul></li><li class="list-group-item"><a href="#shortcuts" class="ripple internal reference">Shortcuts</a><ul ><li class="list-group-item"><a href="#menuitem" class="ripple internal reference"><code >menuitem</code></a></li><li class="list-group-item"><a href="#template" class="ripple internal reference"><code >template</code></a></li><li class="list-group-item"><a href="#report" class="ripple internal reference"><code >report</code></a></li></ul></li><li class="list-group-item"><a href="#csv-data-files" class="ripple internal reference">CSV data files</a></li></ul>
+          
+          <p class="gith-container"><a href="https://github.com/odoo/odoo/edit/8.0/doc/reference/data.rst" class="gith-link">
+              Edit on GitHub
+          </a></p>
+          
+        </div>
+      </aside>
+      
+      <article class="doc-body ">
+        
+        
+  <section id="data-files"><i id="reference-data"></i><p >Odoo is greatly data-driven, and a big part of modules definition is thus
+the definition of the various records it manages: UI (menus and views),
+security (access rights and access rules), reports and plain data are all
+defined via records.</p></section><section id="structure"><h2 >Structure</h2><p >The main way to define data in Odoo is via XML data files: The broad structure
+of an XML data file is the following:</p><ul ><li >The nested root elements <code >openerp</code> and <code >data</code></li><li >Any number of operation elements within <code >data</code></li></ul><div class="highlight-xml"><div class="highlight"><pre><span class="c">&lt;!-- the root elements of the data file --&gt;</span>
+<span class="nt">&lt;openerp&gt;&lt;data&gt;</span>
+  <span class="nt">&lt;operation/&gt;</span>
+  ...
+<span class="nt">&lt;/data&gt;&lt;/openerp&gt;</span>
+</pre></div>
+</div>
+<p >Data files are executed sequentially, operations can only refer to the result
+of operations defined previously</p></section><section id="core-operations"><h2 >Core operations</h2></section><section id="record"><i id="reference-data-record"></i><h3 ><code >record</code></h3><p ><code >record</code> appropriately defines or updates a database record, it has the
+following attributes:</p><dl ><dt ><code >model</code> (required)</dt><dd >name of the model to create (or update)</dd><dt ><code >id</code></dt><dd ><p >the <a href="../glossary.html#term-external-identifier" class="internal reference"><span class="std std-term xref">external identifier</span></a> for this record. It is strongly
+recommended to provide one</p><ul ><li >for record creation, allows subsequent definitions to either modify or
+refer to this record</li><li >for record modification, the record to modify</li></ul></dd><dt ><code >context</code></dt><dd >context to use when creating the record</dd><dt ><code >forcecreate</code></dt><dd ><p >in update mode whether the record should be created if it doesn't exist</p><p >Requires an <a href="../glossary.html#term-external-id" class="internal reference"><span class="std std-term xref">external id</span></a>, defaults to <code >True</code>.</p></dd></dl></section><section id="field"><h4 ><code >field</code></h4><p >Each record can be composed of <code >field</code> tags, defining values to set when
+creating the record. A <code >record</code> with no <code >field</code> will use all default
+values (creation) or do nothing (update).</p><p >A <code >field</code> has a mandatory <code >name</code> attribute, the name of the field to set,
+and various methods to define the value itself:</p><dl ><dt >Nothing</dt><dd >if no value is provided for the field, an implicit <code >False</code> will be set
+on the field. Can be used to clear a field, or avoid using a default value
+for the field.</dd><dt ><code >search</code></dt><dd ><p >for <a href="orm.html#reference-orm-fields-relational" class="internal reference"><span >relational fields</span></a>, should be
+a <a href="orm.html#reference-orm-domains" class="internal reference"><span >domain</span></a> on the field's model.</p><p >Will evaluate the domain, search the field's model using it and set the
+search's result as the field's value. Will only use the first result if
+the field is a <code class="py xref py-class">Many2one</code></p></dd><dt ><code >ref</code></dt><dd ><p >if a <code >ref</code> attribute is provided, its value must be a valid
+<a href="../glossary.html#term-external-id" class="internal reference"><span class="std std-term xref">external id</span></a>, which will be looked up and set as the field's value.</p><p >Mostly for <code class="py xref py-class">Many2one</code> and
+<code class="py xref py-class">Reference</code> fields</p></dd><dt ><code >type</code></dt><dd ><p >if a <code >type</code> attribute is provided, it is used to interpret and convert
+the field's content. The field's content can be provided through an
+external file using the <code >file</code> attribute, or through the node's body.</p><p >Available types are:</p><dl ><dt ><code >xml</code>, <code >html</code></dt><dd >extracts the <code >field</code>'s children as a single document, evaluates
+any <a href="../glossary.html#term-external-id" class="internal reference"><span class="std std-term xref">external id</span></a> specified with the form <code >%(external_id)s</code>.
+<code >%%</code> can be used to output actual <em >%</em> signs.</dd><dt ><code >file</code></dt><dd >ensures that the field content is a valid file path in the current
+model, saves the pair <code class="samp"><em >module</em>,<em >path</em></code> as the field value</dd><dt ><code >char</code></dt><dd >sets the field content directly as the field's value without
+alterations</dd><dt ><code >base64</code></dt><dd ><a href="http://tools.ietf.org/html/rfc3548.html#section-3" class="external reference">base64</a>-encodes the field's content, useful combined with the <code >file</code>
+<em >attribute</em> to load e.g. image data into attachments</dd><dt ><code >int</code></dt><dd >converts the field's content to an integer and sets it as the field's
+value</dd><dt ><code >float</code></dt><dd >converts the field's content to a float and sets it as the field's
+value</dd><dt ><code >list</code>, <code >tuple</code></dt><dd >should contain any number of <code >value</code> elements with the same
+properties as <code >field</code>, each element resolves to an item of a
+generated tuple or list, and the generated collection is set as the
+field's value</dd></dl></dd><dt ><code >eval</code></dt><dd ><p >for cases where the previous methods are unsuitable, the <code >eval</code>
+attributes simply evaluates whatever Python expression it is provided and
+sets the result as the field's value.</p><p >The evaluation context contains various modules (<code >time</code>, <code >datetime</code>,
+<code >timedelta</code>, <code >relativedelta</code>), a function to resolve <a href="../glossary.html#term-external-identifiers" class="internal reference"><span class="std std-term xref">external
+identifiers</span></a> (<code >ref</code>) and the model object for the current field if
+applicable (<code >obj</code>)</p></dd></dl></section><section id="delete"><h3 ><code >delete</code></h3><p >The <code >delete</code> tag can remove any number of records previously defined. It
+has the following attributes:</p><dl ><dt ><code >model</code> (required)</dt><dd >the model in which a specified record should be deleted</dd><dt ><code >id</code></dt><dd >the <a href="../glossary.html#term-external-id" class="internal reference"><span class="std std-term xref">external id</span></a> of a record to remove</dd><dt ><code >search</code></dt><dd >a <a href="orm.html#reference-orm-domains" class="internal reference"><span >domain</span></a> to find records of the model to
+remove</dd></dl><p ><code >id</code> and <code >search</code> are exclusive</p></section><section id="function"><h3 ><code >function</code></h3><p >The <code >function</code> tag calls a method on a model, with provided parameters.
+It has two mandatory parameters <code >model</code> and <code >name</code> specifying respectively
+the model and the name of the method to call.</p><p >Parameters can be provided using <code >eval</code> (should evaluate to a sequence of
+parameters to call the method with) or <code >value</code> elements (see <code >list</code>
+values).</p></section><section id="workflow"><h3 ><code >workflow</code></h3><p >The <code >workflow</code> tag sends a signal to an existing workflow. The workflow
+can be specified via a <code >ref</code> attribute (the <a href="../glossary.html#term-external-id" class="internal reference"><span class="std std-term xref">external id</span></a> of
+an existing workflow) or a <code >value</code> tag returning the id of a workflow.</p><p >The tag also has two mandatory attributes <code >model</code> (the model linked to the
+workflow) and <code >action</code> (the name of the signal to send to the workflow).</p></section><section id="shortcuts"><h2 >Shortcuts</h2><p >Because some important structural models of Odoo are complex and involved,
+data files provide shorter alternatives to defining them using
+<a href="#reference-data-record" class="internal reference"><span >record tags</span></a>:</p></section><section id="menuitem"><h3 ><code >menuitem</code></h3><p >Defines an <code >ir.ui.menu</code> record with a number of defaults and fallbacks:</p><dl ><dt >Parent menu</dt><dd ><ul ><li >If a <code >parent</code> attribute is set, it should be the <a href="../glossary.html#term-external-id" class="internal reference"><span class="std std-term xref">external id</span></a>
+of an other menu item, used as the new item's parent</li><li >If no <code >parent</code> is provided, tries to interpret the <code >name</code> attribute
+as a <code >/</code>-separated sequence of menu names and find a place in the menu
+hierarchy. In that interpretation, intermediate menus are automatically
+created</li><li >Otherwise the menu is defined as a &quot;top-level&quot; menu item (<em >not</em> a menu
+with no parent)</li></ul></dd><dt >Menu name</dt><dd >If no <code >name</code> attribute is specified, tries to get the menu name from
+a linked action if any. Otherwise uses the record's <code >id</code></dd><dt >Groups</dt><dd >A <code >groups</code> attribute is interpreted as a comma-separated sequence of
+<a href="../glossary.html#term-external-identifiers" class="internal reference"><span class="std std-term xref">external identifiers</span></a> for <code >res.groups</code> models. If an
+<a href="../glossary.html#term-external-identifier" class="internal reference"><span class="std std-term xref">external identifier</span></a> is prefixed with a minus (<code >-</code>), the group
+is <em >removed</em> from the menu's groups</dd><dt ><code >action</code></dt><dd >if specified, the <code >action</code> attribute should be the <a href="../glossary.html#term-external-id" class="internal reference"><span class="std std-term xref">external id</span></a>
+of an action to execute when the menu is open</dd><dt ><code >id</code></dt><dd >the menu item's <a href="../glossary.html#term-external-id" class="internal reference"><span class="std std-term xref">external id</span></a></dd></dl></section><section id="template"><i id="reference-data-template"></i><h3 ><code >template</code></h3><p >Creates a <a href="views.html#reference-views-qweb" class="internal reference"><span >QWeb view</span></a> requiring only the <code >arch</code>
+section of the view, and allowing a few <em >optional</em> attributes:</p><dl ><dt ><code >id</code></dt><dd >the view's <a href="../glossary.html#term-external-identifier" class="internal reference"><span class="std std-term xref">external identifier</span></a></dd><dt ><code >name</code>, <code >inherit_id</code>, <code >priority</code></dt><dd >same as the corresponding field on <code >ir.ui.view</code> (nb: <code >inherit_id</code>
+should be an <a href="../glossary.html#term-external-identifier" class="internal reference"><span class="std std-term xref">external identifier</span></a>)</dd><dt ><code >primary</code></dt><dd >if set to <code >True</code> and combined with a <code >inherit_id</code>, defines the view
+as a primary</dd><dt ><code >groups</code></dt><dd >comma-separated list of group <a href="../glossary.html#term-external-identifiers" class="internal reference"><span class="std std-term xref">external identifiers</span></a></dd><dt ><code >page</code></dt><dd >if set to <code >&quot;True&quot;</code>, the template is a website page (linkable to,
+deletable)</dd><dt ><code >optional</code></dt><dd ><code >enabled</code> or <code >disabled</code>, whether the view can be disabled (in the
+website interface) and its default status. If unset, the view is always
+enabled.</dd></dl></section><section id="report"><h3 ><code >report</code></h3><p >Creates a <code >ir.actions.report.xml</code> record with a few default values.</p><p >Mostly just proxies attributes to the corresponding fields on
+<code >ir.actions.report.xml</code>, but also automatically creates the item in the
+<span class="guilabel">More</span> menu of the report's <code >model</code>.</p></section><section id="csv-data-files"><h2 >CSV data files</h2><p >XML data files are flexible and self-descriptive, but very verbose when
+creating a number of simple records of the same model in bulk.</p><p >For this case, data files can also use <a href="http://en.wikipedia.org/wiki/Comma-separated_values" class="external reference">csv</a>, this is often the case for
+<a href="security.html#reference-security-acl" class="internal reference"><span >access rights</span></a>:</p><ul ><li >the file name is <code class="file"><em >model_name</em>.csv</code></li><li >the first row lists the fields to write, with the special field <code >id</code>
+for <a href="../glossary.html#term-external-identifiers" class="internal reference"><span class="std std-term xref">external identifiers</span></a> (used for creation or update)</li><li >each row thereafter creates a new record</li></ul><p >Here's the first lines of the data file defining US states
+<code >res.country.state.csv</code></p><p >rendered in a more readable format:</p><p >For each row (record):</p><ul ><li >the first column is the <a href="../glossary.html#term-external-id" class="internal reference"><span class="std std-term xref">external id</span></a> of the record to create or
+update</li><li >the second column is the <a href="../glossary.html#term-external-id" class="internal reference"><span class="std std-term xref">external id</span></a> of the country object to link
+to (country objects must have been defined beforehand)</li><li >the third column is the <code >name</code> field for <code >res.country.state</code></li><li >the fourth column is the <code >code</code> field for <code >res.country.state</code></li></ul></section>
+
+      </article>
+    </div>
+    
+    <div id="mask"></div>
+  </main>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  </body>
+</html>
